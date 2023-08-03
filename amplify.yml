@@ -1,0 +1,17 @@
+version: 1
+frontend:
+  phases:
+    # IMPORTANT - Please verify your build commands
+    build:
+      commands: [
+        'npm install cross-env -g',
+        'npm install',
+        'npm run build',
+      ]
+  artifacts:
+    baseDirectory: .next
+    files:
+      - '**/*'
+  cache:
+    paths:
+      - node_modules/**/*
